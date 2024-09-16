@@ -1,0 +1,14 @@
+namespace: default
+app:
+  name: web-to-nginx
+  port: 3333
+  targetPort: 3000
+  image: jehielhn/k8s-web-to-nginx
+  replicas: 1
+  tag: latest
+nginx:
+  name: nginx
+  image: nginx
+  tag: latest
+  replicas: 1
+  port: 80
