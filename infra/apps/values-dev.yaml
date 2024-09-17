@@ -1,0 +1,15 @@
+namespace: dev
+app1:
+  name: app1
+  port: 3333
+  targetPort: 3000
+  image: jehielhn/k8s-web-to-nginx
+  replicas: 1
+  tag: dev
+app2:
+  name: app2
+  port: 5000
+  targetPort: 3000
+  image: jehielhn/k8s-web-to-nginx
+  replicas: 1
+  tag: dev

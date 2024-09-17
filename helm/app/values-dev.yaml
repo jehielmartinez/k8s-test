@@ -1,4 +1,0 @@
-namespace: dev
-app:
-  replicas: 1
-  tag: "2.0"

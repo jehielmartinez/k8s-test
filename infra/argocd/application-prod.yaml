@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webapp-dev
+  name: webapp-prod
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/jehielmartinez/k8s-test
     targetRevision: main
-    path: helm/app
+    path: infra/apps
     helm:
       valueFiles:
       - values.yaml
-      - values-dev.yaml
+      - values-prod.yaml
       ignoreMissingValueFiles: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: dev
+    namespace: prod
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
