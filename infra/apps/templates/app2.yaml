@@ -34,6 +34,6 @@ spec:
         - containerPort: {{ .Values.app2.targetPort }}
         env:
         - name: PORT
-          value: {{ .Values.app2.port }}
+          value: "{{ .Values.app1.port }}"
         - name: APP_NAME
-          value: {{ .Values.app2.name }}
+          value: "{{ .Values.app1.name }}"
